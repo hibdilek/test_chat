@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart' ;
 
+
+const int min = 1;
+const int max = 6;
+
+
 class CustomWidget extends StatelessWidget{
   CustomWidget(this.customText , {key}) : super(key:key)  ;
   //CustomWidget({super.key}) ;  also applicable
   final String customText ;
   String? answer ;
+
   TextEditingController controller = TextEditingController();
 
   @override
@@ -34,11 +40,12 @@ class CustomWidget extends StatelessWidget{
           ElevatedButton(
             onPressed: (){
 
+
               print(controller.text);
             },
             style: ElevatedButton.styleFrom(
 
-              primary: Colors.white,
+              backgroundColor: Colors.white,
               elevation: 45,
 
             ),
@@ -50,6 +57,7 @@ class CustomWidget extends StatelessWidget{
 
 
           ),
+
         ],
       ),
       ),
